@@ -4,11 +4,20 @@ body {
     padding-left : 25vw;
 
 }
+.calculator_name{
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: large;
+}
 #calculator{
     width: 100%;
     height: 100vh;
     background-color: #272932;
     padding-top: 3%;
+    border-radius: 20px;
+
+
 }
 
 #display {
@@ -17,6 +26,10 @@ body {
     height: 15%;
     margin-left: 5%;
     margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+
 }
 
 .row{
@@ -34,11 +47,13 @@ body {
     display: inline-block;
     height: 80%;
     width: 100%;
+
 }
 .row > button {
     border: none;
-    height: 100%;
+    height: 75%;
     font-size: xx-large;
+    border-radius: 50px;
 }
 
 .forty-percent {
@@ -75,4 +90,7 @@ body {
 }
 #addition{
     height: 33%;
+}
+{
+
 }
