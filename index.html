@@ -5,56 +5,52 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="http://learning-fuze.github.io/calculator/calculator.js"></script>
-    <link rel="stylesheet" type="text/css" href="font-family: 'Lobster', cursive;">
-
     <script src="JsNew.js"></script>
 </head>
 <body>
-    <div id="calculator">
-        <div class="calculator_name">
-            <p>Calculator</p>
-        </div>
-        <div id="display"></div>
+<div id="calculatorContainer">
+    <div class="calculator_name"><p>Calculator</p></div>
+    
+    <input id = "display" type="text" name="answer"/>
         <div id="buttons">
             <div class="big-column">
                 <div class="row">
-                    <button class="forty-percent">C</button>
-                    <button class="forty-percent">CE</button>
+                    <button id="c"  class="forty-percent">C</button>
+                    <button id="ce" class="forty-percent">CE</button>
                 </div>
                 <div class="row">
-                    <button class="twenty-percent">7</button>
-                    <button class="twenty-percent">8</button>
-                    <button class="twenty-percent">9</button>
+                    <button id="7" class="twenty-percent">7</button>
+                    <button id="8" class="twenty-percent">8</button>
+                    <button id="9" class="twenty-percent">9</button>
                 </div>
                 <div class="row">
-                    <button class="twenty-percent">4</button>
-                    <button class="twenty-percent">5</button>
-                    <button class="twenty-percent">6</button>
+                    <button id="4" class="twenty-percent">4</button>
+                    <button id="5" class="twenty-percent">5</button>
+                    <button id="6" class="twenty-percent">6</button>
                 </div>
                 <div class="row">
-                    <button class="twenty-percent">1</button>
-                    <button class="twenty-percent">2</button>
-                    <button class="twenty-percent">3</button>
+                    <button id='1' class="twenty-percent">1</button>
+                    <button id='2' class="twenty-percent">2</button>
+                    <button id='3' class="twenty-percent">3</button>
                 </div>
                 <div class="row">
-                    <button class="twenty-percent">0</button>
-                    <button class="twenty-percent">.</button>
-                    <button class="twenty-percent">=</button>
+                    <button id='0' class="twenty-percent">0</button>
+                    <button id='period' class="twenty-percent">.</button>
+                    <button id='equals' class="twenty-percent">=</button>
                 </div>
             </div>
             <div class="small-column">
                 <div class="row">
-                    <button class="big-button">/</button>
+                    <button id= "division" class="big-button">/</button>
                 </div>
                 <div class="row">
-                    <button class="big-button">x</button>
+                    <button id="multiplication"class="big-button">x</button>
                 </div>
                 <div class="row">
-                    <button class="big-button">-</button>
+                    <button id="subtraction" class="big-button">-</button>
                 </div>
-                <div id="addition" class="row two-rows">
-                    <button class="big-button">+</button>
+                <div class="row two-rows">
+                    <button id="addition" class="big-button">+</button>
                 </div>
             </div>
         </div>
