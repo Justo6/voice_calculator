@@ -2,6 +2,7 @@ $(document).ready(function(){
     $(".numberButton").click(numberPressed);
     $(".operatorButton").click(operatorPressed);
     $(".equalsButton").click(processData);
+    $(".decimal").click(decimalPressed);
     $("#c").click(clearDisplay);
 
 });
@@ -17,6 +18,10 @@ function operatorPressed () {
     elementHolder[elementIndex] = ($(this).text());
     elementIndex+=1;
     elementHolder[elementIndex] ='';
+    console.log(elementHolder);
+    while (elementHolder.length > 3 ){
+        processData();
+    }
     displayData();
 }
 function displayData(){
@@ -24,13 +29,13 @@ function displayData(){
     $('#display').val(output);
 }
 function processData(){
-    var num1 = parseInt(elementHolder[0]);
+    var num1 = parseFloat(elementHolder[0]);
     var operator =(elementHolder[1]);
-    var num2 = parseInt(elementHolder[2]);
+    var num2 = parseFloat(elementHolder[2]);
     var result = doMath(num1,num2, operator);
     elementHolder.splice(1,2);
     elementHolder[0]=result;
-    elementIndex = elementHolder.length;
+    elementIndex = elementHolder.length - 1 ;
     displayData();
 }
 
@@ -52,6 +57,14 @@ function doMath(num1, num2, operator) {
         return null;
 
     }
+
+}
+
+function decimalPressed () {
+    elementHolder += $(this).text();
+    displayData();
+
+
 
 }
 
