@@ -20,20 +20,21 @@ function equalPressed(){
     processData($(this).text())
 }
 function operatorPressed () {
-    elementIndex = 1;
     if (elementHolder[0] == [""] ){
         return;
     }
-    if(elementHolder.length===3) {
+    elementIndex = 1;
+    if(elementHolder[1] !== undefined && elementHolder[2] == ""){
+        elementHolder[1] = ($(this).text());
+    }
+    if(elementHolder.length===3 && elementHolder[2]!== "") {
         processData($(this).text());
     }
     else{
         elementHolder[1] = ($(this).text());
     }
 
-    if(elementHolder[1] !== undefined){
-        elementHolder[1] = ($(this).text());
-    }
+
         elementIndex++;
         elementHolder[2] = '';
         decimalButtonPressed = false;
