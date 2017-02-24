@@ -33,12 +33,10 @@ function operatorPressed () {
     else{
         elementHolder[1] = ($(this).text());
     }
-
-
-        elementIndex++;
-        elementHolder[2] = '';
-        decimalButtonPressed = false;
-        displayData();
+    elementIndex++;
+    elementHolder[2] = '';
+    decimalButtonPressed = false;
+    displayData();
 }
 
 function decimalPressed () {

@@ -5,6 +5,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script src="JsNew.js"></script>
 </head>
 <body>
@@ -14,42 +15,42 @@
         <div id="buttons">
             <div class="big-column">
                 <div class="row">
-                    <button id="c"  class="forty-percent clear">C</button>
-                    <button id="ce" class="forty-percent operatorButton">CE</button>
+                    <button onclick='responsiveVoice.speak("Clear");' id="c"  class="forty-percent clear">C</button>
+                    <button onclick='responsiveVoice.speak("Clear Everything");' id="ce" class="forty-percent operatorButton">CE</button>
                 </div>
                 <div class="row">
-                    <button id="7" class="twenty-percent numberButton">7</button>
-                    <button id="8" class="twenty-percent numberButton">8</button>
-                    <button id="9" class="twenty-percent numberButton">9</button>
+                    <button onclick='responsiveVoice.speak("Seven");' id="7" class="twenty-percent numberButton">7</button>
+                    <button onclick='responsiveVoice.speak("Eight");' id="8" class="twenty-percent numberButton">8</button>
+                    <button onclick='responsiveVoice.speak("Nine");' id="9" class="twenty-percent numberButton">9</button>
                 </div>
                 <div class="row">
-                    <button id="4" class="twenty-percent numberButton">4</button>
-                    <button id="5" class="twenty-percent numberButton">5</button>
-                    <button id="6" class="twenty-percent numberButton">6</button>
+                    <button onclick='responsiveVoice.speak("Four");' id="4" class="twenty-percent numberButton">4</button>
+                    <button onclick='responsiveVoice.speak("Five");' id="5" class="twenty-percent numberButton">5</button>
+                    <button onclick='responsiveVoice.speak("Six");' id="6" class="twenty-percent numberButton">6</button>
                 </div>
                 <div class="row">
-                    <button id='1' class="twenty-percent numberButton">1</button>
-                    <button id='2' class="twenty-percent numberButton">2</button>
-                    <button id='3' class="twenty-percent numberButton">3</button>
+                    <button onclick='responsiveVoice.speak("One");' id='1' class="twenty-percent numberButton">1</button>
+                    <button onclick='responsiveVoice.speak("Two");' id='2' class="twenty-percent numberButton">2</button>
+                    <button onclick='responsiveVoice.speak("Three");' id='3' class="twenty-percent numberButton">3</button>
                 </div>
                 <div class="row">
-                    <button id='0' class="twenty-percent numberButton">0</button>
-                    <button id='decimal' class="twenty-percent decimal">.</button>
-                    <button id='equals' class="twenty-percent equalsButton">=</button>
+                    <button onclick='responsiveVoice.speak("Zero");' id='0' class="twenty-percent numberButton">0</button>
+                    <button onclick='responsiveVoice.speak("Point");' id='decimal' class="twenty-percent decimal">.</button>
+                    <button onclick='responsiveVoice.speak("Equals");' id='equals' class="twenty-percent equalsButton">=</button>
                 </div>
             </div>
             <div class="small-column">
                 <div class="row">
-                    <button id= "division" class="big-button operatorButton">/</button>
+                    <button onclick='responsiveVoice.speak("Divided by");' id= "division" class="big-button operatorButton">/</button>
                 </div>
                 <div class="row">
-                    <button id="multiplication"class="big-button operatorButton">x</button>
+                    <button onclick='responsiveVoice.speak("Multiplied by");' id="multiplication"class="big-button operatorButton">x</button>
                 </div>
                 <div class="row">
-                    <button id="subtraction" class="big-button operatorButton">-</button>
+                    <button onclick='responsiveVoice.speak("Minus");' id="subtraction" class="big-button operatorButton">-</button>
                 </div>
                 <div class="row two-rows">
-                    <button id="addition" class="big-button operatorButton">+</button>
+                    <button onclick='responsiveVoice.speak("Plus");' id="addition" class="big-button operatorButton">+</button>
                 </div>
             </div>
         </div>
