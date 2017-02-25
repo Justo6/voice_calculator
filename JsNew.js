@@ -14,12 +14,21 @@ var storage=[];
 function numberPressed () {
     elementHolder[elementIndex] += $(this).text();
     displayData();
+    textToVoice($(this).data("string"));
+}
 
+function textToVoice(string) {
+    responsiveVoice.speak(string);
 }
+
 function equalPressed(){
-    processData($(this).text())
+    textToVoice($(this).data("string"));
+    processData($(this).text());
 }
+
 function operatorPressed () {
+    textToVoice($(this).data("string"));
+
     if (elementHolder[0] == [""] ){
         return;
     }
@@ -70,10 +79,10 @@ function processData(last_operator) {
     }
     // operation repeat
     if (!isNaN(elementHolder[0]) && (isNaN(elementHolder[1]) && elementHolder[1] == undefined)) {
-        var num1 = parseFloat(elementHolder[0]);
-        var operator = storage[0];
-        var num2 = storage[1];
-        var result = doMath(num1,num2,operator);
+        num1 = parseFloat(elementHolder[0]);
+        operator = storage[0];
+        num2 = storage[1];
+        result = doMath(num1,num2,operator);
         elementHolder[0] = result;
         displayData();
         return result;
@@ -82,10 +91,10 @@ function processData(last_operator) {
 
     if (elementHolder.length >= 3 && elementHolder[2] !== '') {
         if(last_operator == "+" ||last_operator == "-" || last_operator == "/" ||last_operator == "x" ){
-            var num1 = parseFloat(elementHolder[0]);
-            var operator = (elementHolder[1]);
-            var num2 = parseFloat(elementHolder[2]);
-            var result = doMath(num1, num2, operator);
+            num1 = parseFloat(elementHolder[0]);
+            operator = (elementHolder[1]);
+            num2 = parseFloat(elementHolder[2]);
+            result = doMath(num1, num2, operator);
             storage.push(operator);
             storage.push(num2);
             elementHolder[0] = result;
@@ -95,19 +104,23 @@ function processData(last_operator) {
         }
     }
     if(last_operator == "="){
-        var num1 = parseFloat(elementHolder[0]);
-        var operator = (elementHolder[1]);
-        var num2 = parseFloat(elementHolder[2]);
-        var result = doMath(num1, num2, operator);
+        num1 = parseFloat(elementHolder[0]);
+        operator = (elementHolder[1]);
+        num2 = parseFloat(elementHolder[2]);
+        result = doMath(num1, num2, operator);
         storage.push(operator);
         storage.push(num2);
+        var voiceResult= result.toString();
+        textToVoice(voiceResult);
         elementHolder[0] = result;
         elementHolder.splice(1, 2);
         elementIndex = elementHolder.length - 1;
+
     }
 
     displayData();
     decimalButtonPressed = true;
+
 }
 
 function doMath(num1, num2, operator) {
