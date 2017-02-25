@@ -3,6 +3,7 @@ $(document).ready(function(){
     $(".operatorButton").click(operatorPressed);
     $(".equalsButton").click(equalPressed);
     $("#c").click(clearDisplay);
+    $("#ce").click(clearEntry);
     $(".decimal").click(decimalPressed);
 });
 
@@ -161,7 +162,19 @@ function clearDisplay (){
     storage = [];
 }
 
-
+function clearEntry() {
+    if(elementHolder.length ===3 && elementHolder[2]===""){
+        elementHolder.splice(1,2);
+        displayData();
+        decimalButtonPressed =false;
+    }
+    else{
+        elementHolder.splice(elementHolder.length-1,1);
+        elementHolder[2] = '';
+        displayData();
+        decimalButtonPressed =false;
+    }
+}
 
 
 
