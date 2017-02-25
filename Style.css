@@ -106,10 +106,16 @@ body {
     display: inline-block;
     width: 60px;
     height: 34px;
+    float: right;
 }
 
-.switch input {display:none;}
+.switch input {
+    display:none;
+}
 
+.switch p{
+    color: white;
+}
 .slider {
     position: absolute;
     cursor: pointer;
