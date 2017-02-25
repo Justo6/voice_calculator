@@ -18,7 +18,13 @@ function numberPressed () {
 }
 
 function textToVoice(string) {
-    responsiveVoice.speak(string);
+    if(!$('input[name="sound"]').is(':checked')){
+        return;
+    }
+    else{
+        responsiveVoice.speak(string);
+        console.log("the sound is activated");
+    }
 }
 
 function equalPressed(){
@@ -154,6 +160,7 @@ function clearDisplay (){
     decimalButtonPressed =false;
     storage = [];
 }
+
 
 
 
