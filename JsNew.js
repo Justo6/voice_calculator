@@ -84,7 +84,7 @@ function processData(last_operator) {
         displayData();
         return result;
     }
-    // operation repeat
+    //operation repeat: handles cases when equals is pressed after solving
     if (!isNaN(elementHolder[0]) && (isNaN(elementHolder[1]) && elementHolder[1] == undefined)) {
         num1 = parseFloat(elementHolder[0]);
         operator = storage[0];
@@ -95,7 +95,6 @@ function processData(last_operator) {
         return result;
     }
     //basic guide for 2 operators and 1 operand
-
     if (elementHolder.length >= 3 && elementHolder[2] !== '') {
         if(last_operator == "+" ||last_operator == "-" || last_operator == "/" ||last_operator == "x" ){
             num1 = parseFloat(elementHolder[0]);
