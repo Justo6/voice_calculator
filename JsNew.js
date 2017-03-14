@@ -5,12 +5,14 @@ $(document).ready(function(){
     $("#c").click(clearDisplay);
     $("#ce").click(clearEntry);
     $(".decimal").click(decimalPressed);
+    $(".label_off").hide();
 });
 
 var elementHolder = [""];
 var elementIndex = 0;
 var decimalButtonPressed =false;
 var storage=[];
+
 
 function numberPressed () {
     elementHolder[elementIndex] += $(this).text();
@@ -28,6 +30,15 @@ function textToVoice(string) {
     }
 }
 
+function voiceControl() {
+    if($('input[name="sound"]').is(':checked')){
+        $(".label_off").show();
+    }
+    else{
+        $(".label_off").hide();
+    }
+
+}
 function equalPressed(){
     textToVoice($(this).data("string"));
     processData($(this).text());
