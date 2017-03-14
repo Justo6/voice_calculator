@@ -13,7 +13,6 @@ var elementIndex = 0;
 var decimalButtonPressed =false;
 var storage=[];
 
-
 function numberPressed () {
     elementHolder[elementIndex] += $(this).text();
     displayData();
@@ -37,8 +36,8 @@ function voiceControl() {
     else{
         $(".label_off").hide();
     }
-
 }
+
 function equalPressed(){
     textToVoice($(this).data("string"));
     processData($(this).text());
@@ -46,7 +45,6 @@ function equalPressed(){
 
 function operatorPressed () {
     textToVoice($(this).data("string"));
-
     if (elementHolder[0] == [""] ){
         return;
     }
@@ -134,14 +132,11 @@ function processData(last_operator) {
         elementIndex = elementHolder.length - 1;
 
     }
-
     displayData();
     decimalButtonPressed = true;
-
 }
 
 function doMath(num1, num2, operator) {
-
     if(operator ===  "+" ){
         return (num1 + num2);
     }
