@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JsNew.js"></script>
+</head>
+
+<body id="backgroundImage" background="plain.jpg">
+<div id="calculatorContainer">
+    <label class="switch">
+        <div class="label_voice">Voice</div>
+        <div class="label_on"> On</div>
+        <div class="label_off">Off</div>
+        <input onclick="sound()" name="sound" type="checkbox" checked>
+        <div class="slider round" onclick="voiceControl()"></div>
+    </label>
+    <input id = "display" type="text" name="answer"/>
+        <div id="buttons">
+            <button data-string="clear" id="c"  class="clear_buttons">C</button>
+            <button data-string="clear entry" id="ce" class="clear_buttons">CE</button>
+            <button data-string="seven" id="7" class="twenty-percent numberButton">7</button>
+            <button data-string="eight" id="8" class="twenty-percent numberButton">8</button>
+            <button data-string="nine" id="9" class="twenty-percent numberButton">9</button>
+            <button data-string="divided by" id= "division" class="big-button operatorButton">/</button>
+            <button data-string="four" id="4" class="twenty-percent numberButton">4</button>
+            <button data-string="five" id="5" class="twenty-percent numberButton">5</button>
+            <button data-string="six" id="6" class="twenty-percent numberButton">6</button>
+            <button data-string="multiply by" id="multiplication"class="big-button operatorButton">x</button>
+            <button data-string="one" id='1' class="twenty-percent numberButton">1</button>
+            <button data-string="two" id='2' class="twenty-percent numberButton">2</button>
+            <button data-string="three" id='3' class="twenty-percent numberButton">3</button>
+            <button data-string="minus" id="subtraction" class="big-button operatorButton">-</button>
+            <button data-string="zero" id='0' class="twenty-percent numberButton">0</button>
+            <button data-string="point" id='decimal' class="twenty-percent decimal">.</button>
+            <button data-string="equals" id='equals' class="twenty-percent equalsButton">=</button>
+            <button data-string="plus" id="addition" class="big-button operatorButton">+</button>
+        </div>
+    </div>
+</body>
+</html>
